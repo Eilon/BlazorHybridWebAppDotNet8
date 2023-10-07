@@ -63,6 +63,10 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-rc.2.23479.6" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\BlazorSharedComponentsLib\BlazorSharedComponentsLib.csproj" />
+    </ItemGroup>
+
   <!-- Build Properties must be defined within these property groups to ensure successful publishing
        to the Mac App Store. See: https://aka.ms/maui-publish-app-store#define-build-properties-in-your-project-file -->
   <PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Debug'">

@@ -1,3 +1,4 @@
+using BlazorSharedComponentsLib.Layout;
 using BlazorWebApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +23,7 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
+    .AddAdditionalAssemblies(typeof(MainLayout).Assembly)
     .AddInteractiveServerRenderMode();
 
 app.Run();
